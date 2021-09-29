@@ -7,12 +7,12 @@ function showFirstMessage(text) {
 
 showFirstMessage("Hello World");
 
-function funcDeclaration() {
+function funcDeclaration() { //создается до начала выполнения скрипта, можно вызвать перед объявлением
     console.log("World!");
 }
 funcDeclaration();
 
-const funcExpression = function () {
+const funcExpression = function () { //создается только тогда, когда доходит поток кода, можно вызвать только после объявления
     console.log("hello!");
 };
 funcExpression();
