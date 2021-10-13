@@ -15,7 +15,9 @@ const options = {
 
 options.makeTest();
 
-console.log(Object.keys(options).length);
+const {border, background} = options.colors;
+
+//console.log(Object.keys(options).length);
 
 /*console.log(options.name);
 
