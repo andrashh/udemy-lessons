@@ -22,7 +22,38 @@ btn.forEach(item => {
 
 const link = document.querySelector('a');
 
-link.addEventListener('click', (e) => {
+/*link.addEventListener('click', (e) => {
    e.preventDefault();
     console.log(e.target);
+});*/
+
+// MOBILE
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+
+window.addEventListener('DOMContentLoaded', () => {
+    const box = document.querySelector('.box');
+
+    box.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        console.log('Start');
+        console.log(e.targetTouches);
+    });
+
+    box.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        console.log(e.targetTouches[0].pageX);
+    });
+/*
+    box.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        console.log('End');
+    });*/
 });
+
+// e.touches
+// e.targetTouches -
+// e.changedTouches - список пальцев которые используются в событии/ которые совершили действия
